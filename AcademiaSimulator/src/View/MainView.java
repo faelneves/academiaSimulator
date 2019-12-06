@@ -13,6 +13,8 @@ public class MainView extends javax.swing.JFrame {
     
     FuncionarioView funcionarioView;
     AlunoView alunoView;
+    ExerciciosView exerciciosView;
+    
     /**
      * Creates new form MainView
      */
@@ -20,6 +22,7 @@ public class MainView extends javax.swing.JFrame {
         initComponents();
         funcionarioView = new FuncionarioView();
         alunoView = new AlunoView();
+        exerciciosView = new ExerciciosView();
     }
 
     /**
@@ -63,9 +66,9 @@ public class MainView extends javax.swing.JFrame {
         });
 
         jButton1.setText("Exercicio");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton1MousePressed(evt);
             }
         });
 
@@ -116,10 +119,6 @@ public class MainView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MousePressed
         // TODO add your handling code here:
         funcionarioView.setVisible(true);
@@ -128,6 +127,10 @@ public class MainView extends javax.swing.JFrame {
     private void jButton4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MousePressed
         alunoView.setVisible(true);
     }//GEN-LAST:event_jButton4MousePressed
+
+    private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
+        exerciciosView.setVisible(true);
+    }//GEN-LAST:event_jButton1MousePressed
 
     /**
      * @param args the command line arguments
