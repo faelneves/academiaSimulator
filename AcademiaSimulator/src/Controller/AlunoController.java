@@ -16,7 +16,7 @@ import javax.swing.table.AbstractTableModel;
 public class AlunoController extends AbstractTableModel {
     
     private ArrayList<AlunoModel> alunos = new ArrayList();;;
-    private String[] colunas = {"Nome","CPF","Telefone","Dt. Nascimento"};
+    private String[] colunas = {"Nome","CPF","Telefone","Dt. Nascimento", "Mensalidade"};
 
     @Override
     public String getColumnName(int i) {
